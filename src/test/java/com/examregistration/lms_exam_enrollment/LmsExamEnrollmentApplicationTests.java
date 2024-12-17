@@ -194,6 +194,28 @@ class LmsExamEnrollmentApplicationTests {
 				.andExpect(status().isCreated())
 				.andExpect(jsonPath("$.subjectName", is("Math")));
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@Test
 	void testGetSubjectByIdController() throws Exception {
@@ -205,6 +227,6 @@ class LmsExamEnrollmentApplicationTests {
 		mockMvc.perform(get("/subjects/1")
 						.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
-				.andExpect(jsonPath("$.subjectName", is("Math")));
+				.andExpect(jsonPath("$.subjectName",is("Math")));
 	}
 }
