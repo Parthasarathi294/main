@@ -1,0 +1,755 @@
+{
+	"info": {
+		"_postman_id": "7b3e4c4e-0751-40d9-8c8d-bceb4c78d5be",
+		"name": "lms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25526397",
+		"_collection_link": "https://winter-crescent-597261.postman.co/workspace/myblogapp2~3df649d1-7a40-471b-84a4-f7acb03e65ed/collection/25526397-7b3e4c4e-0751-40d9-8c8d-bceb4c78d5be?action=share&source=collection_link&creator=25526397"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Get Student By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"registrationId\": \"REG123\",\r\n  \"name\": \"John Doe\",\r\n  \"enrolledSubjects\": [],\r\n  \"registeredExams\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Student By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"registrationId\": \"REG123\",\r\n  \"name\": \"John Doe\",\r\n  \"enrolledSubjects\": [],\r\n  \"registeredExams\": []\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/students",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:05:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"registrationId\": \"REG123\",\n        \"name\": \"John Doe\",\n        \"enrolledSubjects\": [],\n        \"registeredExams\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"registrationId\": \"REG223\",\r\n  \"name\": \"Doe\",\r\n  \"enrolledSubjects\": [],\r\n  \"registeredExams\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"registrationId\": \"REG223\",\r\n  \"name\": \"Doe\",\r\n  \"enrolledSubjects\": [],\r\n  \"registeredExams\": []\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/students",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:06:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"registrationId\": \"REG223\",\n    \"name\": \"Doe\",\n    \"enrolledSubjects\": [],\n    \"registeredExams\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 1,\r\n    \"registrationId\": \"REG123\",\r\n    \"name\": \"John Doe\",\r\n    \"enrolledSubjects\": [],\r\n    \"registeredExams\": []\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"registrationId\": \"REG456\",\r\n    \"name\": \"Jane Doe\",\r\n    \"enrolledSubjects\": [],\r\n    \"registeredExams\": []\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"id\": 1,\r\n    \"registrationId\": \"REG123\",\r\n    \"name\": \"John Doe\",\r\n    \"enrolledSubjects\": [],\r\n    \"registeredExams\": []\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"registrationId\": \"REG456\",\r\n    \"name\": \"Jane Doe\",\r\n    \"enrolledSubjects\": [],\r\n    \"registeredExams\": []\r\n  }\r\n]\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/students",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:08:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"registrationId\": \"REG123\",\n        \"name\": \"John Doe\",\n        \"enrolledSubjects\": [],\n        \"registeredExams\": []\n    },\n    {\n        \"registrationId\": \"REG223\",\n        \"name\": \"Doe\",\n        \"enrolledSubjects\": [],\n        \"registeredExams\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Edit Student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"registrationId\": \"REG123\",\r\n  \"name\": \"John Doe Updated\",\r\n  \"enrolledSubjects\": [],\r\n  \"registeredExams\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Student",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"registrationId\": \"REG123\",\r\n  \"name\": \"John Doe Updated\",\r\n  \"enrolledSubjects\": [],\r\n  \"registeredExams\": []\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/students/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:16:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"registrationId\": \"REG123\",\n    \"name\": \"John Doe Updated\",\n    \"enrolledSubjects\": [],\n    \"registeredExams\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/students/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Student",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/students/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:18:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subject",
+			"item": [
+				{
+					"name": "Create Subject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"subjectName\": \"Physics\",\r\n  \"enrolledStudents\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/subjects",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Subject",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"subjectName\": \"Mathematics\",\r\n  \"enrolledStudents\": []\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/subjects",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"subjects"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:27:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"subjectName\": \"Mathematics\",\n    \"enrolledStudents\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Subject",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"subjectName\": \"Mathematics\",\r\n  \"enrolledStudents\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/subjects/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"subjects",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetSubject",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"subjectName\": \"Mathematics\",\r\n  \"enrolledStudents\": []\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/subjects/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"subjects",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:29:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"subjectName\": \"Mathematics\",\n    \"enrolledStudents\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/subjects",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Subject",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/subjects",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"subjects"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:31:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"subjectName\": \"Mathematics\",\n        \"enrolledStudents\": []\n    },\n    {\n        \"subjectName\": \"Physics\",\n        \"enrolledStudents\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Edit Subject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"subjectName\": \"Advanced Mathematics\",\r\n  \"enrolledStudents\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/subjects/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"subjects",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Subject",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"subjectName\": \"Advanced Mathematics\",\r\n  \"enrolledStudents\": []\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/subjects/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"subjects",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2024 22:33:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"subjectName\": \"Advanced Mathematics\",\n    \"enrolledStudents\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Exam",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/exams/1/register?registrationId=REG123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exams",
+								"1",
+								"register"
+							],
+							"query": [
+								{
+									"key": "registrationId",
+									"value": "REG123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
